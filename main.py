@@ -6,12 +6,11 @@ from wtforms.validators import DataRequired, URL
 import csv
 
 '''
-Red underlines? Install the required packages first: 
+Red underline? Install the required packages first: 
 Open the Terminal in PyCharm (bottom left). 
 
 On Windows type:
 python -m pip install -r requirements.txt
-
 On MacOS type:
 pip3 install -r requirements.txt
 
@@ -36,11 +35,12 @@ class CafeForm(FlaskForm):
     close_4 = StringField("close", validators=[DataRequired()])
     coffee_5 = SelectField("coffee", validators=[DataRequired()], choices=["☕️"*i if i > 0 else "✘" for i in range(0,6)])
     wifi_6 = SelectField("wifi", validators=[DataRequired()], choices=["💪"*i if i > 0 else "✘" for i in range(0,6)])
-    power_7 = SelectField("power", validators=[DataRequired()], choices=["🔌"*i if i > 0 else "✘" for i in range(0,6)])
-    submit = SubmitField('Submit')
+ 
 
 # Exercise:
 # add: Location URL, open time, closing time, coffee rating, wifi rating, power outlet rating fields
+      power_7 = SelectField("power", validators=[DataRequired()], choices=["🔌"*i if i > 0 else "✘" for i in range(0,6)])
+    submit = SubmitField('Submit')
 # make coffee/wifi/power a select element with choice of 0 to 5.
 #e.g. You could use emojis ☕️️️/💪/✘/🔌
 # make all fields required except submit
@@ -49,16 +49,16 @@ class CafeForm(FlaskForm):
 
 
 # all Flask routes below
-@app.route("/")
-def home():
+
+def home):
     return render_template("index.html")
+
 
 
 @app.route('/add', methods=["GET", "POST"])
 def add_cafe():
     form = CafeForm()
-    if form.validate_on_submit():
-        added_cafe = [form.cafe_name1.data,
+    if form.validate_on_submit(): added_cafe = [form.cafe_name1.data,
                       form.location_url_2.data,
                       form.open_3.data,
                       form.close_4.data,
@@ -66,7 +66,7 @@ def add_cafe():
                       form.wifi_6.data,
                       form.power_7.data]
         add_line_to_csv("cafe-data.csv", added_cafe)
-        return cafes()
+        return redirect(url_for('cafes'))
     # Exercise:
     # Make the form write a new row into cafe-data.csv
     # with   if form.validate_on_submit()
