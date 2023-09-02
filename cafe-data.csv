@@ -1,8 +1,10 @@
 Cafe Name,Location,Open,Close,Coffee,Wifi,Power
-Lighthaus,https://goo.gl/maps/2EvhB4oq4gyUXKXx9,11AM, 3:30PM,☕☕☕☕️,💪💪,🔌🔌🔌
-Esters,https://goo.gl/maps/13Tjc36HuPWLELaSA,8AM,3PM,☕☕☕☕,💪💪💪,🔌
-Ginger & White,https://goo.gl/maps/DqMx2g5LiAqv3pJQ9,7:30AM,5:30PM,☕☕☕,✘,🔌
 Mare Street Market,https://goo.gl/maps/ALR8iBiNN6tVfuAA8,8AM,1PM,☕☕,💪💪💪,🔌🔌🔌
-test,http://google.com,test,test,✘,✘,✘
-Mike's Coffee Hellhole,https://goo.gl/maps/U5QU1kUPbo4Rscyw5,11:58 PM,7:06 AM,☕️☕️☕️☕️☕️,💪💪💪💪💪,🔌🔌🔌🔌🔌
-yet,http://google.com,another,test,✘,✘,✘
+Test,https://hyper.is/,29pm,48am,☕☕☕,💪💪💪💪💪,🔌🔌🔌🔌🔌
+"
+"d&quot;http://google.com,f,d,✘,✘,✘"
+"d&quot;http://google.com,&quot;f,d,✘,✘,✘"
+"d&quot;,http://google.com,&quot;d,&quot;d,✘,✘,✘"
+"d&quot;,http://google.com,&quot;d,&quot;d,✘,✘,✘"
+"\&quot;d,http://google.com/,f,&quot;&quot;&quot;,✘,✘,✘"
+"a,h",k
